@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanilla Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="todo-card">
+      <h1>Todo List</h1>
+      <p class="sub-title">오늘 할 일을 깔끔하게 관리해보세요.</p>
+
+      <div class="date-area">
+        <button id="prevDateBtn" class="date-btn">‹</button>
+        <div>
+          <p class="date-label">선택된 날짜</p>
+          <h2 id="currentDateText"></h2>
+        </div>
+        <button id="nextDateBtn" class="date-btn">›</button>
+      </div>
+
+      <p id="weekRangeText" class="week-range-text"></p>
+      <div class="week-view">
+        <button id="prevWeekBtn" class="week-nav-btn">‹</button>
+        <div id="weekDays" class="week-days"></div>
+        <button id="nextWeekBtn" class="week-nav-btn">›</button>
+      </div>
+
+      <form id="todoForm" class="todo-form">
+        <input
+          id="todoInput"
+          type="text"
+          placeholder="할 일을 입력하세요"
+          autocomplete="off"
+        />
+        <button type="submit">추가</button>
+      </form>
+
+      <p id="message" class="message"></p>
+
+      <div class="filter-area">
+        <button class="filter-btn active" data-filter="all">전체</button>
+        <button class="filter-btn" data-filter="active">진행 중</button>
+        <button class="filter-btn" data-filter="completed">완료</button>
+      </div>
+
+      <ul id="todoList" class="todo-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
